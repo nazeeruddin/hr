@@ -1,0 +1,10 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<h1>Detailed Application for {{app.first_name}}</h1>
+{% if app %}
+<p class="white-text">First Name: {{app.first_name}}</p>
+<p class="white-text">Last Name: {{app.last_name}}</p></br>
+{% else %}
+<p>No data Available</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,17 @@
+
+{% extends "base_generic.html" %}
+
+{% block content %}>
+<h1>All Applications</h1>
+{% if application_list %}
+<ul>
+{% for match in application %}
+<li>
+<a href="{{ match.get_absolute_url }}">{{ match.title }}</a>
+</li>
+{% endfor %}
+</ul>
+{% else %}
+<p>No Application Available</p>
+{% endif %}
+{% endblock %}

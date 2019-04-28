@@ -1,0 +1,19 @@
+
+{% extends "base_generic.html" %}
+
+{% block content %}>
+<h1>All Applications</h1>
+{% if todaymatch_list %}
+<ul>
+{% for match in todaymatch_list %}
+<li>
+<a href="?id={{ match.id }}">{{ match.first_name }}</a>
+    <a href="/hr/accept?id={{ match.id }}">Accept</a>
+    <a href="/hr/reject?id={{ match.id }}">Reject</a><br/>
+</li>
+{% endfor %}
+</ul>
+{% else %}
+<p>No Application Available</p>
+{% endif %}
+{% endblock %}
